@@ -7,7 +7,6 @@ Static multi-page website for Mayfair Poker Lounge (Gurugram and Panchkula).
 - Shared styles and script: `assets/site.css`, `assets/site.js`.
 
 ## Before going live
-- Replace `yourdomain.com` in the email addresses with the real domain.
 - Add opening hours and club photographs.
 
 ## Publishing
