@@ -9,6 +9,8 @@ const types = {
   '.js': 'text/javascript; charset=utf-8',
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
+  '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
 };
 
 http.createServer(async (req, res) => {
@@ -28,6 +30,8 @@ http.createServer(async (req, res) => {
   const relative = pathname === '/' ? 'index.html' : pathname.slice(1);
   // Only expose the website, never repository metadata or server files.
   const allowed = /^[a-z0-9-]+\.html$/.test(relative)
+    || relative === 'robots.txt'
+    || relative === 'sitemap.xml'
     || /^assets\/[a-zA-Z0-9_-]+\.(css|js|png|jpg)$/.test(relative);
   try {
     if (!allowed) throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
