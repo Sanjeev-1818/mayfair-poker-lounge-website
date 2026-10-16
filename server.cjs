@@ -11,6 +11,7 @@ const types = {
   '.jpg': 'image/jpeg',
   '.txt': 'text/plain; charset=utf-8',
   '.xml': 'application/xml; charset=utf-8',
+  '.ico': 'image/x-icon',
 };
 
 http.createServer(async (req, res) => {
@@ -32,6 +33,7 @@ http.createServer(async (req, res) => {
   const allowed = /^[a-z0-9-]+\.html$/.test(relative)
     || relative === 'robots.txt'
     || relative === 'sitemap.xml'
+    || relative === 'favicon.ico'
     || /^assets\/[a-zA-Z0-9_-]+\.(css|js|png|jpg)$/.test(relative);
   try {
     if (!allowed) throw Object.assign(new Error('Not found'), { code: 'ENOENT' });
