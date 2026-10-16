@@ -204,3 +204,4 @@ section{padding-block:clamp(72px,10vw,120px)}
 @media (max-width:1060px){.pillars{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.pillars{grid-template-columns:1fr}}
 section[id]{scroll-margin-top:72px}
+.hero-h1{margin:0;font-size:inherit;line-height:0}
