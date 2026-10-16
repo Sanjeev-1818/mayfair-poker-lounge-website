@@ -66,10 +66,11 @@ p{margin:0 0 1em;max-width:64ch}
 
 /* home hero */
 .hero{position:relative;min-height:min(100svh,940px);display:grid;place-items:center;overflow:hidden;text-align:center;isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-2;background-position:center 40%;background-size:cover;background-repeat:no-repeat}
+.hero-bg{position:absolute;inset:-24px;z-index:-2;background-position:center 40%;background-size:cover;background-repeat:no-repeat;opacity:.16;filter:blur(5px) saturate(.6)}
 .hero-bg.anim{animation:drift 22s ease-in-out infinite alternate}
 @keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translateY(-1.5%)}}
-.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 60% 55% at 50% 45%,rgba(99,22,46,.55),rgba(42,8,19,.88) 70%,rgba(18,5,8,.97))}
+.hero{background:#2A0813}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 72% 70% at 50.5% 48.6%,rgba(99,22,46,.72),rgba(42,8,19,.94) 72%,#1c050d)}
 .hero::after{content:"";position:absolute;inset:clamp(12px,2.2vw,28px);border:1px solid rgba(218,201,165,.38);pointer-events:none}
 .hero-inner{padding:150px 22px 110px;max-width:900px}
 .hero-logo{width:min(400px,72vw);margin:0 auto}
@@ -205,3 +206,5 @@ section{padding-block:clamp(72px,10vw,120px)}
 @media (max-width:560px){.pillars{grid-template-columns:1fr}}
 section[id]{scroll-margin-top:72px}
 .hero-h1{margin:0;font-size:inherit;line-height:0}
+
+.h1-pre{display:block;font-size:.42em;letter-spacing:.2em;color:var(--muted);margin-bottom:.35em}
